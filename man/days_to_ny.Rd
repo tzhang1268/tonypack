@@ -16,7 +16,7 @@ Outputs "Days to New Years for the input date(s):" + a vector of days to New Yea
 Days to New Years
 }
 \examples{
-days_to_ny(ymd("2020-10-22"))
-days_to_ny(as_date(lubridate::ymd("2020-10-22"):ymd("2020-10-29")))
+days_to_ny(lubridate::ymd("2020-10-22"))
+days_to_ny(lubridate::as_date(lubridate::ymd("2020-10-22"):lubridate::ymd("2020-10-29")))
 
 }

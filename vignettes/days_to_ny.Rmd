@@ -14,14 +14,14 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r}
 library(tonypack)
 library(lubridate)
 library(testthat)
 ```
 
 
-###This page shows some more examples of using the days_to_ny() function.
+### This page shows some more examples of using the days_to_ny() function.
 
 
 Using a vector of multiple dates.

@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' days_to_ny(ymd("2020-10-22"))
-#' days_to_ny(as_date(lubridate::ymd("2020-10-22"):ymd("2020-10-29")))
+#' days_to_ny(lubridate::ymd("2020-10-22"))
+#' days_to_ny(lubridate::as_date(lubridate::ymd("2020-10-22"):lubridate::ymd("2020-10-29")))
 #'
 days_to_ny <- function(inputdate){
 
