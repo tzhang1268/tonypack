@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# tonypack
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of tonypack is store Tony's functions created as part of STAT 545B assignments, and possibly for after the course as well.
+
+## Installation
+
+You can install the released version of tonypack from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+devtools::install_github("tzhang1268/tonypack")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+If you have a date and want to determine what is the number of days to New Years, using the days_to_ny() function to calculate it.
+
+```{r example}
+library(tonypack)
+
+## example of using the days_to_ny function
+days_to_ny(lubridate::ymd("2020-10-22"))
+```
+

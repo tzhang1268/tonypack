@@ -1,0 +1,43 @@
+---
+title: "days_to_ny"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{days_to_ny}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tonypack)
+library(lubridate)
+library(testthat)
+```
+
+
+###This page shows some more examples of using the days_to_ny() function.
+
+
+Using a vector of multiple dates.
+```{r}
+days_to_ny(as_date(ymd("2020-10-22"):ymd("2020-10-29")))
+
+```
+
+
+The function checks whether the input is in Date format. If not it lets the user know what format is causing the error.
+```{r}
+test_that('Tests that non-Date value results in error', {
+  expect_error(days_to_ny("String example not a date"))
+})
+
+
+```
+
+

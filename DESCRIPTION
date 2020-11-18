@@ -1,16 +1,21 @@
 Package: tonypack
-Title: What the Package Does (One Line, Title Case)
+Title: Tony's functions
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Tony",
+           family = "Zhang",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "tony.zhang@example.com")
+Description: The tonypack package contains all of the functions created by Tony Zhang, as part of the STAT 545B assignments.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+Imports: 
+    lubridate
+VignetteBuilder: knitr
