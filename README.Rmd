@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# tonypack
+# Vignette - tonypack
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -24,7 +24,7 @@ The goal of tonypack is store Tony's functions created as part of STAT 545B assi
 
 You can install the released version of tonypack from [CRAN](https://CRAN.R-project.org) with:
 
-``` r
+```{r}
 devtools::install_github("tzhang1268/tonypack")
 ```
 
@@ -41,3 +41,82 @@ library(tonypack)
 days_to_ny(lubridate::ymd("2020-10-22"))
 ```
 
+## Details on the development of each component of the R package
+
+Prior to any steps, first we need to add the devtools library.
+```{r}
+library(devtools)
+```
+
+### Creating the basic R package folder directory
+
+This code section creates the R package folder directory at the specified location. All of the basic necessary files and folders within automatically.
+```{r}
+create_package("C:/Users/TONY/Desktop/tonypack")
+```
+
+### Creating a git reposition locally
+
+This code section set up the git repository locally on the computer. It will require an additional confirmation to confirm the initial commit.
+```{r}
+use_git()
+```
+### Creating functions in the R function directory with appropriate function documentation
+
+The following code block created the file which contains my function days_to_ny(). The code can then be added within the R file.
+```{r}
+use_r("days_to_ny")
+```
+
+The roxygen2 library need to be added to create function documentation. Then the basic roxygen2 documentation skeleton can be added via Rstudio user interface. The roxygen2 skeleton is then manually modified. 
+```{r}
+library(roxygen2)
+```
+
+The function documentations  need to be rendered using the following code block. This information can then be accessed by the user when they use the ?function command.
+```{r}
+document()
+```
+
+### Updating the basic documentation and creating the license
+
+The DESCRIPTION file created by create_package() earlier contains the basic information about the R package. The personal information and package information within need to be manually updated. Creating the license uses the following code, which creates license files in the R package.
+```{r}
+use_mit_license("Tony Zhang")
+```
+
+### Creating a test directory
+
+The following code block creates a folder directory for function tests.
+```{r}
+use_testthat()
+```
+
+
+The following code creates an individual test file for a function. The testing code can then be added into the R file.
+```{r}
+use_test("days_to_ny")
+```
+
+### Creating additional documentation and useful information
+
+This code block creates the README file, which contains overall package information and higher level details.
+```{r}
+use_readme_rmd()
+```
+
+Once the README is updated, use the following code to build it in the package.
+```{r}
+# Note: I commented this part out because it was not allowing the knit to complete properly. 
+# build_readme()
+```
+
+Vignettes can be created using the following code block.
+```{r}
+use_vignette("days_to_ny")
+```
+
+Once a vignette is updated, use the following code to build it in the package.
+```{r}
+build_vignettes()
+```
